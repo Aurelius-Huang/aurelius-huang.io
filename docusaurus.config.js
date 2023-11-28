@@ -4,7 +4,7 @@
 // There are various equivalent ways to declare your Docusaurus config.
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
-import {themes as prismThemes} from 'prism-react-renderer';
+import { themes as prismThemes } from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -44,14 +44,14 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/aurelius-huang/aurelius-huang.github.io',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/aurelius-huang/aurelius-huang.github.io',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -68,7 +68,7 @@ const config = {
       navbar: {
         title: '三余知行',
         logo: {
-          alt: 'My Site Logo',
+          alt: '冬者岁之余，夜者日之余，阴雨者时之余也',
           src: 'img/icon.png',
         },
         items: [
@@ -76,11 +76,12 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Deep Learning',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          { to: '/ml', label: 'Machine Learning', position: 'left' },
+          { to: '/blog', label: 'AIGC', position: 'left' },
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/aurelius-huang',
             label: 'GitHub',
             position: 'right',
           },
@@ -124,7 +125,7 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/aurelius-huang',
               },
             ],
           },
