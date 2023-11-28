@@ -8,8 +8,8 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Threefish',
-  tagline: 'Dinosaurs are cool',
+  title: '三余知行',
+  tagline: '冬者岁之余，夜者日之余，阴雨者时之余也',
   favicon: 'img/icon.png',
 
   // Set the production url of your site here
