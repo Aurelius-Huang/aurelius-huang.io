@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkthreefish_pages=self.webpackChunkthreefish_pages||[]).push([[110],{4368:e=>{e.exports=JSON.parse('[{"label":"Home","permalink":"/ml/tags/home","count":1},{"label":"\u673a\u5668\u5b66\u4e60","permalink":"/ml/tags/\u673a\u5668\u5b66\u4e60","count":2}]')}}]);
