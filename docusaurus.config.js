@@ -10,10 +10,10 @@ import { themes as prismThemes } from 'prism-react-renderer';
 const config = {
   title: '三余知行',
   tagline: '冬者岁之余，夜者日之余，阴雨者时之余也',
-  favicon: 'img/icon.png',
+  favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://aurelius-huang.github.io',
+  url: 'https://threefish.site',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -30,9 +30,21 @@ const config = {
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: 'zh-Hans',
+    locales: ['zh-Hans'],
   },
+
+  themes: [
+    [
+      require.resolve('@easyops-cn/docusaurus-search-local'),
+      {
+        hashed: true,
+        indexDocs: true,
+        indexPages: true,
+        language: ['zh'],
+      },
+    ],
+  ],
 
   presets: [
     [
@@ -43,20 +55,67 @@ const config = {
           sidebarPath: './sidebars.js',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/aurelius-huang/aurelius-huang.github.io',
+          editUrl: 'https://github.com/aurelius-huang/aurelius-huang.github.io',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/aurelius-huang/aurelius-huang.github.io',
+          editUrl: 'https://github.com/aurelius-huang/aurelius-huang.github.io',
         },
         theme: {
           customCss: './src/css/custom.css',
         },
       }),
+    ],
+  ],
+
+  plugins: [
+    // ["docusaurus-plugin-umami"],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'ml',
+        path: 'ml',
+        routeBasePath: 'ml',
+        sidebarPath: './sidebars.js',
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'dl',
+        path: 'dl',
+        routeBasePath: 'dl',
+        sidebarPath: './sidebars.js',
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'aigc',
+        path: 'aigc',
+        routeBasePath: 'aigc',
+        sidebarPath: './sidebars.js',
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'practice',
+        path: 'practice',
+        routeBasePath: 'practice',
+        sidebarPath: './sidebars.js',
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'communication',
+        path: 'communication',
+        routeBasePath: 'communication',
+        sidebarPath: './sidebars.js',
+      },
     ],
   ],
 
@@ -69,17 +128,68 @@ const config = {
         title: '三余知行',
         logo: {
           alt: '冬者岁之余，夜者日之余，阴雨者时之余也',
-          src: 'img/icon.png',
+          src: 'img/logo.png',
         },
         items: [
           {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
-            position: 'left',
-            label: 'Deep Learning',
+            to: '/ml',
+            label: '机器学习',
+            docId: 'index',
+            type: 'doc',
+            position: 'right',
+            docsPluginId: 'ml',
           },
-          { to: '/ml', label: 'Machine Learning', position: 'left' },
-          { to: '/blog', label: 'AIGC', position: 'left' },
+          {
+            to: '/dl',
+            label: '深度学习',
+            docId: 'index',
+            type: 'doc',
+            position: 'right',
+            docsPluginId: 'dl',
+          },
+          {
+            to: '/aigc',
+            label: 'AIGC',
+            docId: 'index',
+            type: 'doc',
+            position: 'right',
+            docsPluginId: 'aigc',
+          },
+          {
+            type: 'dropdown',
+            label: '应用篇',
+            position: 'right',
+            items: [
+              {
+                to: '/practice',
+                label: '工程实践',
+                docId: 'index',
+                docsPluginId: 'practice',
+              }
+            ],
+          },
+          {
+            type: 'dropdown',
+            label: '读写听说',
+            position: 'right',
+            items: [
+              {
+                to: '/communication',
+                label: '人际方法',
+                docId: 'index',
+                docsPluginId: 'communication',
+              }
+            ]
+          },
+          {
+            to: '/blog',
+            label: '文章',
+            position: 'left'
+          },
+          {
+            type: 'search',
+            position: 'right'
+          },
           {
             href: 'https://github.com/aurelius-huang',
             label: 'GitHub',
@@ -91,37 +201,66 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: '知识体系',
             items: [
               {
-                label: 'Tutorial',
+                label: '机器学习',
+                to: '/docs/intro',
+              },
+              {
+                label: '深度学习',
+                to: '/docs/intro',
+              },
+              {
+                label: 'AIGC',
                 to: '/docs/intro',
               },
             ],
           },
           {
-            title: 'Community',
+            title: '场景应用',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'NLP',
+                to: '/docs/intro',
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                label: '搜索引擎',
+                to: '/docs/intro',
               },
               {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                label: '推荐系统',
+                to: '/docs/intro',
               },
             ],
           },
           {
-            title: 'More',
+            title: '编程语言',
             items: [
               {
-                label: 'Blog',
-                to: '/blog',
+                label: 'Java',
+                to: '/docs/intro',
+              },
+              {
+                label: 'Python',
+                to: '/docs/intro',
+              },
+              {
+                label: 'Go',
+                to: '/docs/intro',
+              },
+            ],
+          },
+          {
+            title: '链接',
+            items: [
+              {
+                label: 'CSDN',
+                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              },
+              {
+                label: 'BiliBili',
+                href: 'https://twitter.com/docusaurus',
               },
               {
                 label: 'GitHub',
@@ -130,12 +269,16 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} 三余知行, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Threefish K. A. 保留所有权利。`,
       },
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
       },
+      // umami: {
+      //   websiteid: "websiteID", // Insctructions below on how to find this
+      //   src: "script src", // Instructions below on how to find this
+      // },
     }),
 };
 
