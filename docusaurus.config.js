@@ -275,10 +275,6 @@ const config = {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
       },
-      // umami: {
-      //   websiteid: "websiteID", // Insctructions below on how to find this
-      //   src: "script src", // Instructions below on how to find this
-      // },
     }),
 };
 
