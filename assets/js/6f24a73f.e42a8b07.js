@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkthreefish_pages=self.webpackChunkthreefish_pages||[]).push([[5687],{6459:e=>{e.exports=JSON.parse('{"label":"hola","permalink":"/trend/tags/hola","allTagsPath":"/trend/tags","count":1,"unlisted":false}')}}]);
