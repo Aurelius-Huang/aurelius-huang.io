@@ -21,7 +21,7 @@ const config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'Aurelius Huang', // Usually your GitHub org/user name.
-  projectName: 'aurelius-huang.github.io', // Usually your repo name.
+  projectName: 'threefish.site', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -58,7 +58,11 @@ const config = {
           editUrl: 'https://github.com/aurelius-huang/aurelius-huang.github.io',
         },
         blog: {
+          path: 'trends',
+          blogTitle: '动态',
+          routeBasePath: 'trend',
           showReadingTime: true,
+          postsPerPage: 5,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl: 'https://github.com/aurelius-huang/aurelius-huang.github.io',
@@ -76,7 +80,7 @@ const config = {
       '@docusaurus/plugin-content-docs',
       {
         id: 'ml',
-        path: 'ml',
+        path: './articles/ml',
         routeBasePath: 'ml',
         sidebarPath: './sidebars.js',
       },
@@ -85,7 +89,7 @@ const config = {
       '@docusaurus/plugin-content-docs',
       {
         id: 'dl',
-        path: 'dl',
+        path: './articles/dl',
         routeBasePath: 'dl',
         sidebarPath: './sidebars.js',
       },
@@ -94,7 +98,7 @@ const config = {
       '@docusaurus/plugin-content-docs',
       {
         id: 'aigc',
-        path: 'aigc',
+        path: './articles/aigc',
         routeBasePath: 'aigc',
         sidebarPath: './sidebars.js',
       },
@@ -103,7 +107,7 @@ const config = {
       '@docusaurus/plugin-content-docs',
       {
         id: 'practice',
-        path: 'practice',
+        path: './articles/practice',
         routeBasePath: 'practice',
         sidebarPath: './sidebars.js',
       },
@@ -112,7 +116,7 @@ const config = {
       '@docusaurus/plugin-content-docs',
       {
         id: 'communication',
-        path: 'communication',
+        path: './articles/communication',
         routeBasePath: 'communication',
         sidebarPath: './sidebars.js',
       },
@@ -131,6 +135,17 @@ const config = {
           src: 'img/logo.png',
         },
         items: [
+          {
+            to: '/trend',
+            label: '动态',
+            position: 'left'
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'tutorialSidebar',
+            position: 'left',
+            label: '文档',
+          },
           {
             to: '/ml',
             label: '机器学习',
@@ -182,11 +197,6 @@ const config = {
             ]
           },
           {
-            to: '/blog',
-            label: '文章',
-            position: 'left'
-          },
-          {
             type: 'search',
             position: 'right'
           },
@@ -205,15 +215,15 @@ const config = {
             items: [
               {
                 label: '机器学习',
-                to: '/docs/intro',
+                to: '/ml',
               },
               {
                 label: '深度学习',
-                to: '/docs/intro',
+                to: '/dl',
               },
               {
                 label: 'AIGC',
-                to: '/docs/intro',
+                to: '/aigc',
               },
             ],
           },
@@ -222,15 +232,15 @@ const config = {
             items: [
               {
                 label: 'NLP',
-                to: '/docs/intro',
+                to: '/practice',
               },
               {
                 label: '搜索引擎',
-                to: '/docs/intro',
+                to: '/practice',
               },
               {
                 label: '推荐系统',
-                to: '/docs/intro',
+                to: '/practice',
               },
             ],
           },
@@ -239,15 +249,15 @@ const config = {
             items: [
               {
                 label: 'Java',
-                to: '/docs/intro',
+                to: '/practice',
               },
               {
                 label: 'Python',
-                to: '/docs/intro',
+                to: '/practice',
               },
               {
                 label: 'Go',
-                to: '/docs/intro',
+                to: '/practice',
               },
             ],
           },

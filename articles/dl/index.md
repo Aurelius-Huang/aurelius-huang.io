@@ -1,7 +1,7 @@
 ---
 id: index
 sidebar_position: 1
-title: Home
+title: 深度学习
 description: 深度学习 Home
 tags:
   - Home

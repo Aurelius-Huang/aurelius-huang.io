@@ -1,7 +1,7 @@
 ---
 id: doc-with-tags
 sidebar_position: 1
-title: 一篇包含标签的文档dddd
+title: 一篇包含标签的文档
 description: Create a doc page with rich content.
 tags:
   - 演示

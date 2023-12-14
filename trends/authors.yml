@@ -1,3 +1,9 @@
+aurelius:
+  name: Aurelius Huang
+  title: Maintainer @ Threefish K. A.
+  url: https://github.com/aurelius-huang
+  image_url: "/img/logo.png"
+
 endi:
   name: Endilie Yacop Sucipto
   title: Maintainer of Docusaurus
@@ -15,9 +21,3 @@ slorber:
   title: Docusaurus maintainer
   url: https://sebastienlorber.com
   image_url: https://github.com/slorber.png
-
-aurelius:
-  name: Aurelius Huang
-  title: Maintainer @ Threefish K. A.
-  url: https://github.com/aurelius-huang
-  image_url: '/img/logo.png'

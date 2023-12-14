@@ -1,7 +1,7 @@
 ---
 id: index
 sidebar_position: 1
-title: Home
+title: 人际方法
 description: 听说读写 Home
 tags:
   - Home
