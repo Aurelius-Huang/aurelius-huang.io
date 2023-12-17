@@ -42,3 +42,21 @@
   width: 100%; */
   border-radius: 9%;
 }
+
+.dropdown__menu {
+  min-width: 6rem;
+}
+
+/* .d-block {
+  display: block !important;
+}
+
+.w-100 {
+  width: 100% !important;
+} */
+
+/* .carousel-inner {
+  height: 480px;
+  width: 1216px;
+  margin: auto;
+} */

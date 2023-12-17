@@ -7,6 +7,8 @@ import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import Heading from '@theme/Heading';
 import styles from './index.module.css';
 
+import Carousel from './Carousel.js';
+
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
   return (
@@ -30,6 +32,16 @@ function HomepageHeader() {
             机器学习概览 - 5min ⏱️
           </Link>
         </div>
+      </div>
+    </header>
+  );
+}
+
+function HomepageCarousel() {
+  return (
+    <header className={clsx('hero hero--primary', styles.heroBanner)}>
+      <div className="container hero-min">
+        <Carousel />
       </div>
     </header>
   );
