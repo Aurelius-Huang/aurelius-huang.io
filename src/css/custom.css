@@ -60,3 +60,16 @@
   width: 1216px;
   margin: auto;
 } */
+
+.admonitionHeading_node_modules-\@docusaurus-theme-classic-lib-theme-Admonition-Layout-styles-module {
+  display: none;
+}
+
+.article-hearder-update-span {
+  padding-right: 9px;
+}
+
+.article-hearder-read-span {
+  display:inline-block;
+  min-width: 56px;
+}
