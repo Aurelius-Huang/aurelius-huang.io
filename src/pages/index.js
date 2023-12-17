@@ -7,7 +7,7 @@ import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import Heading from '@theme/Heading';
 import styles from './index.module.css';
 
-import Carousel from './Carousel.js';
+import Carousel from '@site/src/components/Carousel.js';
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
