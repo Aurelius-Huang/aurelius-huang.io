@@ -51,21 +51,22 @@ const config = {
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
-        docs: {
-          sidebarPath: './sidebars.js',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl: 'https://github.com/aurelius-huang/aurelius-huang.github.io',
-        },
+        // docs: {
+        //   sidebarPath: './sidebars.js',
+        //   // Please change this to your repo.
+        //   // Remove this to remove the "edit this page" links.
+        //   editUrl: 'https://github.com/aurelius-huang/aurelius-huang.github.io',
+        // },
         blog: {
           path: 'trends',
           blogTitle: '动态',
           routeBasePath: 'trend',
           showReadingTime: true,
           postsPerPage: 5,
+          blogSidebarCount: 'ALL',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: 'https://github.com/aurelius-huang/aurelius-huang.github.io',
+          editUrl: 'https://github.com/aurelius-huang/threefish.site',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -140,12 +141,12 @@ const config = {
             label: '动态',
             position: 'left'
           },
-          {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
-            position: 'left',
-            label: '文档',
-          },
+          // {
+          //   type: 'docSidebar',
+          //   sidebarId: 'tutorialSidebar',
+          //   position: 'left',
+          //   label: '文档',
+          // },
           {
             to: '/ml',
             label: '机器学习',
@@ -162,30 +163,30 @@ const config = {
             position: 'right',
             docsPluginId: 'dl',
           },
-          {
-            to: '/aigc',
-            label: 'AIGC',
-            docId: 'index',
-            type: 'doc',
-            position: 'right',
-            docsPluginId: 'aigc',
-          },
+          // {
+          //   to: '/aigc',
+          //   label: 'AIGC',
+          //   docId: 'index',
+          //   type: 'doc',
+          //   position: 'right',
+          //   docsPluginId: 'aigc',
+          // },
+          // {
+          //   type: 'dropdown',
+          //   label: '应用篇',
+          //   position: 'right',
+          //   items: [
+          //     {
+          //       to: '/practice',
+          //       label: '工程实践',
+          //       docId: 'index',
+          //       docsPluginId: 'practice',
+          //     }
+          //   ],
+          // },
           {
             type: 'dropdown',
-            label: '应用篇',
-            position: 'right',
-            items: [
-              {
-                to: '/practice',
-                label: '工程实践',
-                docId: 'index',
-                docsPluginId: 'practice',
-              }
-            ],
-          },
-          {
-            type: 'dropdown',
-            label: '读写听说',
+            label: '见闻成长',
             position: 'right',
             items: [
               {
@@ -200,6 +201,10 @@ const config = {
             type: 'search',
             position: 'right'
           },
+          // {
+          //   type: 'localeDropdown',
+          //   position: 'right',
+          // },
           {
             href: 'https://github.com/aurelius-huang',
             label: 'GitHub',
@@ -223,7 +228,7 @@ const config = {
               },
               {
                 label: 'AIGC',
-                to: '/aigc',
+                to: '/dl',
               },
             ],
           },
@@ -232,15 +237,15 @@ const config = {
             items: [
               {
                 label: 'NLP',
-                to: '/practice',
+                to: '/dl',
               },
               {
                 label: '搜索引擎',
-                to: '/practice',
+                to: '/dl',
               },
               {
                 label: '推荐系统',
-                to: '/practice',
+                to: '/dl',
               },
             ],
           },
@@ -249,15 +254,15 @@ const config = {
             items: [
               {
                 label: 'Java',
-                to: '/practice',
+                to: '/dl',
               },
               {
                 label: 'Python',
-                to: '/practice',
+                to: '/dl',
               },
               {
                 label: 'Go',
-                to: '/practice',
+                to: '/dl',
               },
             ],
           },
@@ -266,7 +271,7 @@ const config = {
             items: [
               {
                 label: 'CSDN',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                href: 'https://blog.csdn.net/ChaoMing_H',
               },
               {
                 label: 'BiliBili',
