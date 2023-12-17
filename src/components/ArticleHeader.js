@@ -6,10 +6,10 @@ export default function ArticleHeader({ path, updatedAt }) {
         <div id="article-info">
             <Admonition type="info">
                 <p>
-                    <span class="article-hearder-update-span">
+                    <span class="article-hearder-update">
                         <BranchesOutlined /> {updatedAt}
                     </span>
-                    <span class="article-hearder-read-span">
+                    <span class="article-hearder-reads">
                         <EyeOutlined /> <span class="waline-pageview-count" data-path={path} />
                     </span>
                     <span>

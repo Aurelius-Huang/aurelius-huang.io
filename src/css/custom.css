@@ -66,11 +66,19 @@
   display: none;
 }
 
-.article-hearder-update-span {
-  padding-right: 9px;
+.article-hearder-update {
+  padding-right: 6px;
 }
 
-.article-hearder-read-span {
+.article-hearder-reads {
   display: inline-block;
-  min-width: 56px;
+  min-width: 55px;
+}
+
+.article-image {
+  padding-top: 6px;
+}
+
+.article-image-alt {
+  font-weight: bold;
 }
