@@ -61,7 +61,8 @@
   margin: auto;
 } */
 
-.admonitionHeading_node_modules-\@docusaurus-theme-classic-lib-theme-Admonition-Layout-styles-module {
+.admonitionHeading_node_modules-\@docusaurus-theme-classic-lib-theme-Admonition-Layout-styles-module,
+.admonitionHeading_Gvgb {
   display: none;
 }
 
@@ -70,6 +71,6 @@
 }
 
 .article-hearder-read-span {
-  display:inline-block;
+  display: inline-block;
   min-width: 56px;
 }

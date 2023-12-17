@@ -30,5 +30,4 @@ const CarouselModule = () => (
   </Carousel>
 );
 
-
 export default CarouselModule;
