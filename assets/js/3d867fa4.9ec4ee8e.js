@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkthreefish_pages=self.webpackChunkthreefish_pages||[]).push([[3732],{7541:e=>{e.exports=JSON.parse('{"label":"\u673a\u5668\u5b66\u4e60","permalink":"/trend/tags/\u673a\u5668\u5b66\u4e60","allTagsPath":"/trend/tags","count":1,"unlisted":false}')}}]);
