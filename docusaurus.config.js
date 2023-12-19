@@ -290,7 +290,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Threefish K. A. 保留所有权利。`,
+        copyright: `Copyright © ${new Date().getFullYear()} Threefish K. A. 保留所有权利  <a href="https://beian.miit.gov.cn">粤ICP备2023147376号-1</a>`,
       },
       prism: {
         theme: prismThemes.github,
