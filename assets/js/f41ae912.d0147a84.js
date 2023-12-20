@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkthreefish_pages=self.webpackChunkthreefish_pages||[]).push([[7143],{4631:e=>{e.exports=JSON.parse('{"permalink":"/trend/tags/\u673a\u5668\u5b66\u4e60","page":1,"postsPerPage":5,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"\u52a8\u6001"}')}}]);
