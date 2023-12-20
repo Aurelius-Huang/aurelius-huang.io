@@ -15,7 +15,7 @@
 
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css" integrity="sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM" crossorigin="anonymous"><link rel="stylesheet" href="/assets/css/styles.111cc6bf.css">
-<script src="/assets/js/runtime~main.e2949596.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.e8966696.js" defer="defer"></script>
 <script src="/assets/js/main.338b6453.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -30,16 +30,16 @@
 </ul>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="2-引入机器学习">2. 引入机器学习<a href="#2-引入机器学习" class="hash-link" aria-label="2. 引入机器学习的直接链接" title="2. 引入机器学习的直接链接">​</a></h2>
 <p><strong>垃圾邮件过滤器（传统规则系统）</strong></p>
-<div><div align="center" class="article-image"><img src="/img/1-landscape/传统规则系统.png" alt="传统规则系统"><br><p><span class="article-image-alt">传统规则系统</span></p></div></div>
+<div><div align="center" class="article-image"><img src="/img/ml/1/传统规则系统.drawio.png" alt="传统规则系统"><br><p><span class="article-image-alt">传统规则系统</span></p></div></div>
 <ul>
 <li><code>研究问题</code>：看垃圾邮件一般是什么样子；比如垃圾邮件会频繁出现一些<code>固定模式</code>的词或短语（4U、credit card、free、amazing 等）；</li>
 <li><code>编写规则</code>：为每个模式各写一个检测算法，程序在邮件中匹配到一个模式（规律），就将之标记为垃圾邮件；</li>
 <li><code>评估</code> &amp; <code>分析错误</code>：测试程序匹配正确性，重复迭代，直到匹配效果足够好；</li>
 </ul>
 <p>传统规则系统应对这类需要大量人工微调或大量规则的问题，<code>很难维护</code>大量复杂的规则；</p>
-<div><div align="center" class="article-image"><img src="/img/1-landscape/机器学习系统.png" alt="机器学习系统"><br><p><span class="article-image-alt">机器学习系统</span></p></div></div>
+<div><div align="center" class="article-image"><img src="/img/ml/1/机器学习系统.drawio.png" alt="机器学习系统"><br><p><span class="article-image-alt">机器学习系统</span></p></div></div>
 <p>ML 技术的垃圾邮件过滤器会自动学习词和短语（<code>预测因素</code>），通过与非垃圾邮件比较，检测垃圾邮件中反复出现的词语模式；更易维护，也更精确；</p>
-<div><div align="center" class="article-image"><img src="/img/1-landscape/自适应系统.png" alt="自适应系统"><br><p><span class="article-image-alt">自适应系统</span></p></div></div>
+<div><div align="center" class="article-image"><img src="/img/ml/1/自适应系统.drawio.png" alt="自适应系统"><br><p><span class="article-image-alt">自适应系统</span></p></div></div>
 <ul>
 <li>
 <p><code>更新数据</code>：用户手动标记垃圾邮件，此时 ML 算法会自动完成垃圾邮件标记，无须人工干预；</p>
