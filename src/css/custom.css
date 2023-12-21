@@ -72,7 +72,8 @@
 
 .article-hearder-reads {
   display: inline-block;
-  min-width: 55px;
+  min-width: 36px;
+  padding-right: 6px;
 }
 
 .article-image {
