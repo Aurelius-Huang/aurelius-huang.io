@@ -8,6 +8,7 @@ tags:
 ---
 
 import ArticleHeader from '@site/src/components/ArticleHeader';
+import ArticleImage from '@site/src/components/ArticleImage';
 
 <ArticleHeader path="/ml/model-training" updatedAt="2023年12月04日" />
 
@@ -92,7 +93,7 @@ plt.axis([0, 2, 0, 15])
 plt.show()
 ```
 
-![请添加图片描述](https://img-blog.csdnimg.cn/252ef427f9ad4cb0baaafbccaf6184d8.png#pic_center)
+<ArticleImage src="/img/ml/4/generated_data_plot.png" alt="generated data plot" title="" description="generated data plot" />
 
 **使用标准方程计算 $\hat{\theta}$**
 
@@ -132,7 +133,7 @@ plt.axis([0, 2, 0, 15])
 plt.show()
 ```
 
-![请添加图片描述](https://img-blog.csdnimg.cn/c8b084a0b8124cb99d8a5941f47e5f9d.png#pic_center)
+<ArticleImage src="/img/ml/4/linear_model_predictions_plot.png" alt="linear model predictions plot" title="" description="linear model predictions plot" />
 
 ### 2. 奇异值分解
 
@@ -211,7 +212,7 @@ _假设你迷失在山上的浓雾之中，你能感觉到的只有你脚下路�
 
 - `梯度下降算法`，通过测量参数向量 $\theta$ 相关的误差函数的局部梯度，并不断沿着降低梯度的方向调整，直到梯度降为 0，达到最小值；
 
-![请添加图片描述](https://img-blog.csdnimg.cn/f395329549b842498fe1cf4927453ae5.jpeg#pic_center)
+<ArticleImage src="/img/ml/4/梯度下降过程.jpg" alt="梯度下降过程" title="" description="梯度下降过程" />
 
 首先随机选择一个 $\theta$ 值（随机初始化），然后逐步改进，每次踏出一步，每步参试降低一点成本函数（如 MSE），直到算法收敛为一个最小值；
 
@@ -221,7 +222,7 @@ _假设你迷失在山上的浓雾之中，你能感觉到的只有你脚下路�
 
 **梯度下降陷阱**
 
-![请添加图片描述](https://img-blog.csdnimg.cn/3ada7d48490b4866bfad394a5c252ed2.jpeg#pic_center)
+<ArticleImage src="/img/ml/4/梯度下降陷阱.jpg" alt="梯度下降陷阱" title="" description="梯度下降陷阱" />
 
 并非所有的成本函数都是一个碗型的，可能如图一般不规则，导致很难收敛到全局最小值；若随机初始化起点在左侧，会收敛到一个局部最小值，而非全局最小值；若随机初始化起点在右侧，则可能需要很长一段时间才能迭代到最低点，若停下得太早，可能永远无法到底全局最小值；
 
@@ -231,7 +232,7 @@ _假设你迷失在山上的浓雾之中，你能感觉到的只有你脚下路�
 
 因不同特征的尺寸差异巨大导致的细长碗状成本函数；特征值越小（如 $\theta_1$），就需要更大的变化来影响成本函数；
 
-![请添加图片描述](https://img-blog.csdnimg.cn/95b2133d79e742f0b761dd00a6813a4e.jpeg#pic_center)
+<ArticleImage src="/img/ml/4/梯度下降成本（细长碗状）.jpg" alt="梯度下降成本（细长碗状）" title="" description="梯度下降成本（细长碗状）" />
 
 左图的梯度下降算法直接走向最小值，可以快速到达；右图则先沿着与全局最小值方向近乎垂直的方向前进，然后验证近乎平坦的山谷走到最小值，需要花费大量时间；
 
@@ -326,7 +327,7 @@ plt.subplot(133); plot_gradient_descent(theta, eta=0.5)
 plt.show()
 ```
 
-![请添加图片描述](https://img-blog.csdnimg.cn/1fdb75cae2564809b9a5ac9b8d7ff7ef.png#pic_center)
+<ArticleImage src="/img/ml/4/gradient_descent_plot.png" alt="gradient descent plot" title="" description="gradient descent plot" />
 
 - `左图`，学习率太低，需要太长时间找到解决方法；
 - `中图`，学习率恰好，经过几次迭代收敛出了最终解；
@@ -342,7 +343,7 @@ plt.show()
 
 - `随机梯度下降`，与使用整个训练集计算每一步的梯度，算法特别慢的批量梯度下降相对，随机梯度下降在每一步梯度计算时，在训练集随机选择一个实例计算梯度，算法很快；可用于海量数据集的训练，每次迭代只需要在内存中运行一个实例（SGD 可以作为核外算法实现）；
 
-![请添加图片描述](https://img-blog.csdnimg.cn/988cafcf31464626942867984d88562e.jpeg#pic_center)
+<ArticleImage src="/img/ml/4/随机梯度下降训练过程.jpg" alt="随机梯度下降训练过程" title="" description="随机梯度下降训练过程" />
 
 随机梯度下降的随机性质让它比批量梯度下降要不规则得多；成本函数不再是持续下降至最下值，而是存在上下波动，但整体上会慢慢下降，最终接近最小值（即时达到最小值依旧会反弹，该算法的参数值只能是足够好，不会是最优）；
 
@@ -392,7 +393,7 @@ plt.axis([0, 2, 0, 15])
 plt.show()
 ```
 
-![请添加图片描述](https://img-blog.csdnimg.cn/1e0939e141b446789b7376f8ae56d13f.png#pic_center)
+<ArticleImage src="/img/ml/4/sgd_plot.png" alt="sgd plot" title="" description="sgd plot" />
 
 随机选取事例，某些实例可能每个轮次被选中多次，有的实例则可能不会被选中；
 
@@ -462,7 +463,7 @@ plt.axis([-3, 3, 0, 10])
 plt.show()
 ```
 
-![请添加图片描述](https://img-blog.csdnimg.cn/1dd86f76feac44ccb356829dfde72e1e.png#pic_center)
+<ArticleImage src="/img/ml/4/quadratic_data_plot.png" alt="quadratic data plot" title="" description="quadratic data plot" />
 
 **使用 PolynomialFeatures 类转换训练数据**
 
@@ -505,7 +506,7 @@ plt.axis([-3, 3, 0, 10])
 plt.show()
 ```
 
-![请添加图片描述](https://img-blog.csdnimg.cn/b03983065003496799a53312f4c3a62a.png#pic_center)
+<ArticleImage src="/img/ml/4/quadratic_predictions_plot.png" alt="quadratic predictions plot" title="" description="quadratic predictions plot" />
 
 存在多个特征时，多项式回归能够找到特征之间的关系；PolynomialFeatures 可以将特征的所有组合添加到给定的多项式阶数（如存在两个特征 a 和 b，degress=3 的 PolynomialFeatures 不仅会添加特征 $a^2, a^3, b^2, b^3$，还会添加组合 $ab, a^2b, ab^2$）；
 
@@ -540,7 +541,7 @@ plt.axis([-3, 3, 0, 10])
 plt.show()
 ```
 
-![请添加图片描述](https://img-blog.csdnimg.cn/1ef96e4c47a7422da70a66a763026ca6.png#pic_center)
+<ArticleImage src="/img/ml/4/high_degree_polynomials_plot.png" alt="high degree polynomials plot" title="" description="high degree polynomials plot" />
 
 高阶多项式回归模型严重过拟合训练数据，而线性模型欠拟合，二次模型最能泛化数据集（数据就是使用二次模型生成的）；
 
@@ -587,7 +588,7 @@ plt.axis([0, 80, 0, 3])
 plt.show()
 ```
 
-![请添加图片描述](https://img-blog.csdnimg.cn/0936cbc100954fbabb8c13fcd3b12ba2.png#pic_center)
+<ArticleImage src="/img/ml/4/underfitting_learning_curves_plot.png" alt="underfitting learning curves plot" title="" description="underfitting learning curves plot" />
 
 当训练集只有一个或两个实例时，模型可以很好的拟合训练集（ train 曲线的 RMSE 从零开始），但无法正确泛化验证集（val 曲线误差很大）；随着新实例的加入，模型不能完美拟合训练数据（数据有噪声，且并非线性），但随着不断学习，验证集误差逐渐降低，训练集误差会一直上升，直到达到平稳状态；两条曲线最终接近，但误差停留在较高的位置；这说明模型是欠拟合训练集，且添加更多训练实例也无济于事，可能需要更复杂的模型或提供更好的特征；
 
@@ -606,7 +607,7 @@ plt.axis([0, 80, 0, 3])
 plt.show()
 ```
 
-![请添加图片描述](https://img-blog.csdnimg.cn/7e02af4de4284393b5c998c7d7bbef1d.png#pic_center)
+<ArticleImage src="/img/ml/4/learning_curves_plot.png" alt="learning curves plot" title="" description="learning curves plot" />
 
 - 与普通线性回归模型相比，训练数据上的误差低了很多（2 -> 1）；
 - train 与 val 曲线之间的间隙更大，说明该模型在训练集上的性能要比在验证集上的性能要好很多，这说明模型过拟合，不过若使用更大的训练集，两条曲线会继续接近；
@@ -711,7 +712,7 @@ plt.show()
 
 随着 $\alpha$ 的增加，预测更平坦（不极端、更合理），模型的方差减少，偏差增加；
 
-![请添加图片描述](https://img-blog.csdnimg.cn/585c38eb7b6f49228182b03b1cbbf714.png#pic_center)
+<ArticleImage src="/img/ml/4/ridge_regression_plot.png" alt="ridge regression plot" title="" description="ridge regression plot" />
 
 **闭式解的岭回归**
 
@@ -757,7 +758,7 @@ plot_model(Lasso, polynomial=True, alphas=(0, 10**-7, 1), random_state=42)
 plt.show()
 ```
 
-![请添加图片描述](https://img-blog.csdnimg.cn/5848fb16aeb640c29ecf7f0e44df5a10.png#pic_center)
+<ArticleImage src="/img/ml/4/lasso_regression_plot.png" alt="lasso regression plot" title="" description="lasso regression plot" />
 
 Lasso 回归倾向于完全消除掉最不重要的特征的权重；（$\alpha = 10^{-7}$ 看起来像二次的，因为所有高阶多项式的特征权重都等于零）；Lasso 回归会自动执行特征选择并输出一个稀疏模型（只有很少的特征有非零权重）；
 
@@ -806,7 +807,7 @@ array([1.54333232])
 
 - `提前停止`，对于梯度下降这类迭代学习算法，在验证误差达到最小值时停止训练；通过早期停止法，一旦验证误差达到最小值就立刻停止训练；
 
-![请添加图片描述](https://img-blog.csdnimg.cn/31d598ae20204cedacdb0bd4cb278831.png#pic_center)
+<ArticleImage src="/img/ml/4/early_stopping_plot.png" alt="early stopping plot" title="" description="early stopping plot" />
 
 随机和小批量梯度下降时，曲线不是平滑的，可能很难知道是否达到最小值，此时可以仅在验证错误超过最小值一段时间后停止（确信模型不会做到更好时），然后回滚模型参数到验证误差最小的位置；
 
@@ -889,7 +890,7 @@ plt.axis([-10, 10, -0.1, 1.1])
 plt.show()
 ```
 
-![请添加图片描述](https://img-blog.csdnimg.cn/b005182f45b543d3bbeaf99d9c0937be.png#pic_center)
+<ArticleImage src="/img/ml/4/logistic_function_plot.png" alt="logistic function plot" title="" description="logistic function plot" />
 
 逻辑回归模型估算出实例 x 属于整理的概率 $\hat{p} = h_\theta(x)$，就可以预测 $\hat{y}$
 
@@ -1023,7 +1024,7 @@ plt.axis([0, 3, -0.02, 1.02])
 plt.show()
 ```
 
-![请添加图片描述](https://img-blog.csdnimg.cn/c3dca10ba6a44597a7fdfeedef395d7c.png#pic_center)
+<ArticleImage src="/img/ml/4/logistic_regression_plot.png" alt="logistic regression plot" title="" description="logistic regression plot" />
 
 维吉尼亚鸢尾花（三角形）的花瓣宽度范围为 1.4 ~ 2.5 cm，其他两种鸢尾花（正方形）花瓣宽度范围为 0.1 ~ 1.8 cm，存在一部分重叠；
 
@@ -1070,7 +1071,7 @@ plt.axis([2.9, 7, 0.8, 2.7])
 plt.show()
 ```
 
-![请添加图片描述](https://img-blog.csdnimg.cn/97fcee41637a4a40b280f02f1f7a41ff.png#pic_center)
+<ArticleImage src="/img/ml/4/logistic_regression_contour_plot.png" alt="logistic regression contour plot" title="" description="logistic regression contour plot" />
 
 虚线表示模型估算概率为 50% 的点，即模型的决策边界（线性的边界，每条平行线代表一个模型输出的特定概率）；
 
@@ -1175,7 +1176,7 @@ plt.axis([0, 7, 0, 3.5])
 plt.show()
 ```
 
-![请添加图片描述](https://img-blog.csdnimg.cn/707277595deb4f53b40578a82b8f868d.png#pic_center)
+<ArticleImage src="/img/ml/4/softmax_regression_contour_plot.png" alt="softmax regression contour plot" title="" description="softmax regression contour plot" />
 
 任何两个类之间的决策边界都是线性的，估算概率可能是低于 50% 的，在所有决策边界相交的地方，所有类的估算概率都为 33%；
 
