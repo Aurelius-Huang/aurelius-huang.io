@@ -8,6 +8,7 @@ tags:
 ---
 
 import ArticleHeader from '@site/src/components/ArticleHeader';
+import ArticleImage from '@site/src/components/ArticleImage';
 
 <ArticleHeader path="/ml/classification" updatedAt="2023年12月04日" />
 
@@ -98,7 +99,7 @@ plot_digit(some_digit)
 plt.show()
 ```
 
-![请添加图片描述](https://img-blog.csdnimg.cn/778b9dbb4bb94e6abc2c4d8374aa94fc.png)
+<ArticleImage src="/img/ml/3/MNIST 第一张样本图片.png" alt="MNIST 第一张样本图片" title="" description="MNIST 第一张样本图片" />
 
 ```python
 # 查看图片对应标签，验证是一个数字 '5'
@@ -117,7 +118,7 @@ plot_digits(example_images, images_per_row=10)
 plt.show()
 ```
 
-![请添加图片描述](https://img-blog.csdnimg.cn/6c8e08d70bf74983a3914c1e77dfe480.png)
+<ArticleImage src="/img/ml/3/MNIST 样本图片.png" alt="MNIST 样本图片" title="" description="MNIST 样本图片" />
 
 **将字符标签转换成整数**
 
@@ -263,7 +264,7 @@ array([[53892,   687],
 
 混淆矩阵的行表示实际类别（实际为 `非 5`、`5`），列表示预测类别（预测为 `非 5`、`5`）；
 
-![请添加图片描述](https://img-blog.csdnimg.cn/fdf7af3b1f804e73a89e7e264845476b.jpeg)
+<ArticleImage src="/img/ml/3/混淆矩阵示意图.jpg" alt="混淆矩阵示意图" title="" description="混淆矩阵示意图" />
 
 - `负类（Negative）`：实际为`非 5`
   - `真负类（TN）`：53892 个`正确`分类为`非 5`；
@@ -342,7 +343,7 @@ f1_score(y_train_5, y_train_pred)
 
 **SGDClassifier 的分类决策**
 
-![请添加图片描述](https://img-blog.csdnimg.cn/a09365859205401599ecf7302a2c3228.jpeg)
+<ArticleImage src="/img/ml/3/SGD 分类决策过程.jpg" alt="SGD 分类决策过程" title="" description="SGD 分类决策过程" />
 
 基于决策函数计算处每个实例的分值；将每个实例按分数从低到高从左到右排列；取一个阈值，大于该阈值的实例为正类，否则为负类；（通常阈值越高，查全率越低，查准率越高）；
 
@@ -421,7 +422,7 @@ plt.plot([threshold_90_precision], [recall_90_precision], "ro")
 plt.show()
 ```
 
-![请添加图片描述](https://img-blog.csdnimg.cn/504d58e8fbaa44a5964cc9df9a6e826f.png)
+<ArticleImage src="/img/ml/3/查准率和查全率与决策阈值的关系曲线.png" alt="查准率和查全率与决策阈值的关系曲线" title="" description="查准率和查全率与决策阈值的关系曲线" />
 
 查准率比查全率曲线要崎岖一些，因为随着阈值的提升，查准率可能会下降，但查全率只会下降；
 
@@ -445,7 +446,7 @@ plt.plot([recall_90_precision], [0.9], "ro")
 plt.show()
 ```
 
-![请添加图片描述](https://img-blog.csdnimg.cn/20391b8ad82c4d80b8b529ef4e0a2384.png)
+<ArticleImage src="/img/ml/3/PR 曲线.png" alt="PR 曲线" title="" description="PR 曲线" />
 
 查全率在 80% 之后，查准率急剧下降，说明可能需要在此之前选择一个`权衡点`；
 
@@ -518,7 +519,7 @@ plt.plot([fpr_90], [recall_90_precision], "ro")
 plt.show()
 ```
 
-![请添加图片描述](https://img-blog.csdnimg.cn/b22a39b096ed41d5af857f1a6afa4bae.png)
+<ArticleImage src="/img/ml/3/ROC 曲线.png" alt="ROC 曲线" title="" description="ROC 曲线" />
 
 召回率（TPR）越高，分类器的假正类（FPR）就越多（虚线表示纯随机分类器的 ROC 曲线，越高于虚线的 ROC 曲线，对应的分类器越优）；
 
@@ -568,7 +569,7 @@ plt.legend(loc="lower right")
 plt.show()
 ```
 
-![请添加图片描述](https://img-blog.csdnimg.cn/0dc9e615b5d74efb8751ade68d6fc915.png)
+<ArticleImage src="/img/ml/3/随机森林分类器 ROC 曲线.png" alt="随机森林分类器 ROC 曲线" title="" description="随机森林分类器 ROC 曲线" />
 
 RandomForestClassifier 的 ROC 曲线比 SGDClassifier 好很多；
 
@@ -721,7 +722,7 @@ plt.matshow(conf_mx, cmap=plt.cm.gray)
 plt.show()
 ```
 
-![请添加图片描述](https://img-blog.csdnimg.cn/6dced70e7d9043d4833c9ce815ec2f9e.png)
+<ArticleImage src="/img/ml/3/混淆矩阵示意图.png" alt="混淆矩阵示意图" title="" description="混淆矩阵示意图" />
 
 大多数图片被分到对角线上，说明它们被正确分类了；数字 5 略暗，说明可能数字 5 较少，也可能数字 5 的分类效果不如其他数字；
 
@@ -742,7 +743,7 @@ plt.matshow(norm_conf_mx, cmap=plt.cm.gray)
 plt.show()
 ```
 
-![请添加图片描述](https://img-blog.csdnimg.cn/b60a1232909f46578ed04cd97993d534.png)
+<ArticleImage src="/img/ml/3/混淆矩阵示意图（概率）.png" alt="混淆矩阵示意图（概率）" title="" description="混淆矩阵示意图（概率）" />
 
 每行代表实际类、每列代表预测类；
 
@@ -767,7 +768,7 @@ plt.subplot(224); plot_digits(X_bb[:25], images_per_row=5)
 plt.show()
 ```
 
-![请添加图片描述](https://img-blog.csdnimg.cn/f5be599bad8f46409b061cc859e865b4.png)
+<ArticleImage src="/img/ml/3/3 & 5 的示例.png" alt="3 & 5 的示例" title="" description="3 & 5 的示例" />
 
 左侧两个 $5 \times 5$ 矩阵显示了呗分类为数字 3 的图片，右侧两个 $5 \times 5$ 矩阵显示了被分类为数字 5 的图片（左下和右上为分类错误示例）；
 
@@ -839,7 +840,7 @@ plot_digit(y_test_mod[:1].to_numpy())
 plt.show()
 ```
 
-![请添加图片描述](https://img-blog.csdnimg.cn/d0cd70fd2bef4d4f9674906d4e0b5643.png)
+<ArticleImage src="/img/ml/3/噪声图片样例.png" alt="噪声图片样例" title="" description="噪声图片样例" />
 
 **通过训练分类器，清洗噪声图片**
 
@@ -849,7 +850,7 @@ clean_digit = knn_clf.predict(X_test_mod[:1].to_numpy())
 plot_digit(clean_digit)
 ```
 
-![请添加图片描述](https://img-blog.csdnimg.cn/5565ed8f3d4e42aa9aeb6efacef07742.png)
+<ArticleImage src="/img/ml/3/清洗图片示例.png" alt="清洗图片示例" title="" description="清洗图片示例" />
 
 清洗后的效果与原图相近了！
 
