@@ -14,8 +14,8 @@
 
 
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css" integrity="sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM" crossorigin="anonymous"><link rel="stylesheet" href="/assets/css/styles.8942e28c.css">
-<script src="/assets/js/runtime~main.8a97d1d3.js" defer="defer"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css" integrity="sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM" crossorigin="anonymous"><link rel="stylesheet" href="/assets/css/styles.935d48a1.css">
+<script src="/assets/js/runtime~main.ed183f9e.js" defer="defer"></script>
 <script src="/assets/js/main.516f8339.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -30,16 +30,16 @@
 </ul>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="2-引入机器学习">2. 引入机器学习<a href="#2-引入机器学习" class="hash-link" aria-label="2. 引入机器学习的直接链接" title="2. 引入机器学习的直接链接">​</a></h2>
 <p><strong>垃圾邮件过滤器（传统规则系统）</strong></p>
-<div><div align="center" class="article-image"><img src="/img/ml/1/传统规则系统.drawio.png" alt="传统规则系统"><br><p><span class="article-image-alt">传统规则系统</span></p></div></div>
+<div><div align="center" class="article-image"><img src="/img/ml/1/传统规则系统.drawio.png" alt="传统规则系统" class="article-img"><br><p><span class="article-image-alt">传统规则系统</span></p></div></div>
 <ul>
 <li><code>研究问题</code>：看垃圾邮件一般是什么样子；比如垃圾邮件会频繁出现一些<code>固定模式</code>的词或短语（4U、credit card、free、amazing 等）；</li>
 <li><code>编写规则</code>：为每个模式各写一个检测算法，程序在邮件中匹配到一个模式（规律），就将之标记为垃圾邮件；</li>
 <li><code>评估</code> &amp; <code>分析错误</code>：测试程序匹配正确性，重复迭代，直到匹配效果足够好；</li>
 </ul>
 <p>传统规则系统应对这类需要大量人工微调或大量规则的问题，<code>很难维护</code>大量复杂的规则；</p>
-<div><div align="center" class="article-image"><img src="/img/ml/1/机器学习系统.drawio.png" alt="机器学习系统"><br><p><span class="article-image-alt">机器学习系统</span></p></div></div>
+<div><div align="center" class="article-image"><img src="/img/ml/1/机器学习系统.drawio.png" alt="机器学习系统" class="article-img"><br><p><span class="article-image-alt">机器学习系统</span></p></div></div>
 <p>ML 技术的垃圾邮件过滤器会自动学习词和短语（<code>预测因素</code>），通过与非垃圾邮件比较，检测垃圾邮件中反复出现的词语模式；更易维护，也更精确；</p>
-<div><div align="center" class="article-image"><img src="/img/ml/1/自适应系统.drawio.png" alt="自适应系统"><br><p><span class="article-image-alt">自适应系统</span></p></div></div>
+<div><div align="center" class="article-image"><img src="/img/ml/1/自适应系统.drawio.png" alt="自适应系统" class="article-img"><br><p><span class="article-image-alt">自适应系统</span></p></div></div>
 <ul>
 <li>
 <p><code>更新数据</code>：用户手动标记垃圾邮件，此时 ML 算法会自动完成垃圾邮件标记，无须人工干预；</p>
@@ -50,7 +50,7 @@
 </ul>
 <p><strong>ML 适用场景</strong></p>
 <ul>
-<li>有解决方案，但需要大量人工微调或准信大量规则的问题，机器学习通常可以简化代码，相比传统方法有更好的性能（ 如<code>垃圾邮件过滤器</code>）；</li>
+<li>有解决方案，但需要大量人工微调或准信大量规则的问题，机器学习通常 可以简化代码，相比传统方法有更好的性能（如<code>垃圾邮件过滤器</code>）；</li>
 <li>传统方法难以解决的复杂问题，最好的 ML 自我学习算法也许可以找到解决方案（如<code>语言识别</code>）；</li>
 <li>环境有波动的问题，ML 算法可以适应新数据；</li>
 <li>帮助人类洞察复杂问题和大量数量（<code>数据挖掘</code>）；</li>
@@ -63,7 +63,7 @@
 <li><code>文本分类</code>：使用<code>自然语言处理</code>（<code>NLP</code>）工具自动标识论坛中的恶评；</li>
 <li><code>文本总结</code>：使用<code>自然语言处理</code>（<code>NLP</code>）工具自动对长文章做总结；</li>
 <li><code>自然语言理解</code>（<code>NLU</code>）&amp; <code>问答模块</code>：使用<code>自然语言处理</code>（<code>NLP</code>）工具创建聊天机器人或个人助理；</li>
-<li><code>回归问题</code>：使用<code>回归模型</code>，如<code>线性回归</code>、<code>多项式回归</code>、<code>SVM 回归</code>、<code>随机森林回归</code>、<code>人工神经网络</code>等，或通过<code>过去性能指标</code>使用如 <code>RNN</code>、<code>CNN</code>、<code>Transformer</code> 等，预测公司下一年的收入；</li>
+<li><code>回归问题</code>：使用<code>回归模型</code>，如<code>线性回归</code>、<code>多项式回归</code>、<code>SVM 回归</code>、<code>随机森林回归</code>、<code>人工神经网络</code>等，或通过<code>过去性能指标</code>使用如 <code>RNN</code>、<code>CNN</code>、<code>Transformer</code> 等，预测公司下一年的收入 ；</li>
 <li><code>语言识别</code>：使用 RNN、CNN、Transformer 等处理音频采样，实现对语言命令做出反应；</li>
 <li><code>异常检测</code>：检测性用卡欺诈；</li>
 <li><code>聚类问题</code>：基于客户的购买记录对客户进行分类，对不同类别的客户设计不同的市场策略；</li>
@@ -80,7 +80,7 @@
 <p>通过经标记的数据（<code>标签</code>）进行训练的学习任务；</p>
 <ul>
 <li><code>标签</code>，在学习中，提供给算法的<code>包含解决方案</code>的训练集；</li>
-<li><code>属性</code>，一种数据类型，反映事件或对象在某方面的表现或性质的事项；</li>
+<li><code>属性</code>，一种数据类型，反映事件或对象在某方面的表现或性质的事 项；</li>
 <li><code>特征</code>，通常指一个属性加上其值；也可指代属性；</li>
 <li><code>分类任务</code>，典型的有监督学习任务，通过大量包含类别信息的样本进行训练，学习如何对新样本进行分类；预测结果为离散值；</li>
 <li><code>回归任务</code>，典型的有监督学习任务，通过大量包含标签的样本进行训练，学习如何给新的样本预测一个目标数值；预测结果为连续值；</li>
@@ -109,7 +109,7 @@
 <p><strong>重要的无监督学习算法</strong></p>
 <ul>
 <li><code>聚类算法</code></li>
-<li><code>k-均值算法</code></li>
+<li><code>k-均值算  法</code></li>
 <li><code>DBSCAN</code></li>
 <li><code>分层聚类</code></li>
 <li><code>异常检测和新颖性检测</code></li>
@@ -148,7 +148,7 @@
 <ol start="2">
 <li>在线学习</li>
 </ol>
-<p>循序渐进的给系统提供训练数据，逐步积累学习成果；模型经过训练并投入生产环境，然后根据飞速写入的最新数据继续不断学习；</p>
+<p>循序渐进的  给系统提供训练数据，逐步积累学习成果；模型经过训练并投入生产环境，然后根据飞速写入的最新数据继续不断学习；</p>
 <p>新的数据一旦经过在线学习系统的学习，就可以丢弃（节省了大量资源，除非需要留备<code>重新学习</code>）；</p>
 <p>适用于资源有限的系统，或者超大数据集的学习任务（<code>核外学习</code>，将数据集分成小批量数据用于在线学习系统的持续训练）；</p>
 <p>在线学习在接收不良数据后，系统的性能会逐渐下降；这需要密切监控系统，一旦<code>性能下降</code>，及时<code>中断学习</code>（甚至恢复之前的工作状态）；需要监控输入数据，检测出异常数据（<code>异常检测算法</code>）；</p>
@@ -168,7 +168,7 @@
 <ol start="2">
 <li>基于模型学习</li>
 </ol>
-<p>泛化出适 配训练实例的模型（可以描述实例分布的代数表示？），使用该模型进行新实例的预测；</p>
+<p>泛化出适配训练实例的模型（可以描述实例分布的代数表示？），使用该模型进行新实例的预测；</p>
 <ul>
 <li><code>模型</code>，数据中学得的结果，对应了数据中某种潜在的规律，亦称假设，规律本身称作“真相”，学习过程就是为了找出或逼近真相（模型表示全局性结果，模式表示局部性结果，比如一条规则）；</li>
 <li><code>模型训练</code>，运行一种寻找模型参数的算法，通过训练样本，找出最符合训练数据的模型参数，使成本函数最小；</li>
@@ -181,7 +181,7 @@
 <p>通过模型训练找到最拟合训练数据的模型参数，然后直接通过得到的模型计算新实例的预测结果；</p>
 <p><code>研究数据</code> -&gt; <code>选择模型</code> -&gt; <code>训练模型</code> -&gt; <code>模型推理</code>；</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="5-主要挑战">5. 主要挑战<a href="#5-主要挑战" class="hash-link" aria-label="5. 主要挑战的直接链接" title="5. 主要挑战的直接链接">​</a></h2>
-<p>在 ML 过程中最主要的任务是选择学习算法、使用某些数据进行训练；因此最可能出现的问题就是<code>坏算法</code>和<code>坏数据</code>;</p>
+<p>在 ML 过程中最主要的任务是选择学习算法、使用某些数据进行训练；因此最可能出现的问题就是<code>坏算法</code>和<code> 坏数据</code>;</p>
 <ol>
 <li>数据不足</li>
 </ol>
@@ -220,7 +220,7 @@
 <ol start="5">
 <li>过拟合</li>
 </ol>
-<p>把训练样本自身的一些特点当作了所有潜在样本都会具有的一般性质；可以检测到数据中微小<code>模式</code>，但若训练集本身是有噪声的，或者数据集太小（引入了采样噪声），就很可能导致模型检测噪声本身的模式；这些模式不能泛化新的实例；</p>
+<p>把训练样本自身的一些特点当作了所有潜在样本都会具有的一般性质；可以检测到数据中微小<code>模式</code>，但若训练集本身是有噪声的，或者数据集太小（引入了采样噪声），就很可能导致模型检测噪  声本身的模式；这些模式不能泛化新的实例；</p>
 <ul>
 <li>
 <p><code>简化模型</code>，选择较少参数的模型（高阶多项式模型 -&gt; 线性模型）、减少训练数据中的属性数量、约束模型；</p>
@@ -273,7 +273,7 @@
 </ul>
 <p>验证集太小则模型选择不精确，太大则训练集剩余部分变小，犹如让短跑运动员参加马拉松；</p>
 <ul>
-<li><code>交叉验证法</code>（<code>cross validation</code>）/<code>k 折交叉验证</code>（<code>k-fold cross validation</code>），将数据集 D 划分为 k 个大小相似，数据分布一致（通过<code>分层采样</code>获得）的<code>互  斥子集</code>，每次用 k-1 个子集对并集作为训练集，剩余那个子集作为验证集；这样可以获得 k 组训练/验证集，进行 k 次训练和测试后，求 k 次测试结果的均值；</li>
+<li><code>交叉验证法</code>（<code>cross validation</code>）/<code>k 折交叉验证</code>（<code>k-fold cross validation</code>），将数据集 D 划分为 k 个大小相似，数据 分布一致（通过<code>分层采样</code>获得）的<code>互斥子集</code>，每次用 k-1 个子集对并集作为训练集，剩余那个子集作为验证集；这样可以获得 k 组训练/验证集，进行 k 次训练和测试后，求 k 次测试结果的均值；</li>
 </ul>
 <ol start="2">
 <li>数据不匹配</li>
@@ -292,7 +292,7 @@
 </ul>
 </li>
 <li>
-<p><code>NFL</code>（<code>No Free Lunch Theorem</code>，<code>没有免费的午餐</code>）: 无论算法 a 多聪明，算法 b 多笨拙，他们的期望性能相同，若对数据绝对没有任何假设，就没有理由偏好于某个模型；脱离具体问题，空泛地谈论<code>什么学习算法更好</code>毫  无意义；</p>
+<p><code>NFL</code>（<code>No Free Lunch Theorem</code>，<code>没有免费的午餐</code>）: 无论算法 a 多聪明，算法 b 多笨拙，他们的期望性能相同，若对数据绝对没有任何假设，就没有理由偏好于某个模型；脱离具  体问题，空泛地谈论<code>什么学习算法更好</code>毫无意义；</p>
 </li>
 </ul>
 <hr>
