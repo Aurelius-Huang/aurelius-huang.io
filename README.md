@@ -37,6 +37,11 @@ GIT_USER=<Your GitHub username> yarn deploy
 # If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
 ```
 
+### Color
+
+1. 主题色：#75B798
+2. 模块色：#1D995F
+
 ### Todo
 
 1. 可以考虑将文章分段书写，在组装成一个整体文章时，加入头尾信息；

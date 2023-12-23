@@ -80,6 +80,10 @@
   padding-top: 6px;
 }
 
+.article-img {
+  border-radius: 2%;
+}
+
 .article-image-alt {
   font-weight: bold;
 }

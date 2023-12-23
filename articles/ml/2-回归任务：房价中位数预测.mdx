@@ -31,8 +31,6 @@ import ArticleImage from '@site/src/components/ArticleImage';
 
 - `业务目标`：模型的输出（对一个区域房价的中位数的预测）将会与其他信号一起传输给另一个机器学习系统；下游系统将用来决策这个区域是否值得投资；
 
-![请添加图片描述](https://img-blog.csdnimg.cn/490c96111b56454aa6a3e0182396da82.png)
-
 <ArticleImage src="/img/ml/2/房地产投资项目流水线.drawio.png" alt="房地产投资项目流水线" title="" description="房地产投资项目流水线" />
 
 - `流水线`，一个序列的数据处理组件；用于机器学习系统中的数据操作和数据转化；
@@ -238,7 +236,7 @@ housing = load_data(HOUSING_PATH, 'housing.csv')
 housing.head()
 ```
 
-![请添加图片描述](https://img-blog.csdnimg.cn/c8e15ba014364e6aafe27bb50a98234c.jpeg)
+<ArticleImage src="/img/ml/2/housing 数据集中的前 5 行.jpg" alt="housing 数据集中的前 5 行" title="" description="housing 数据集中的前 5 行" />
 
 - `实例属性`：
   - longitude: 经度
@@ -299,7 +297,7 @@ Name: ocean_proximity, dtype: int64
 housing.describe()
 ```
 
-![请添加图片描述](https://img-blog.csdnimg.cn/b40e955560384a31a66fe0b0196ee92a.jpeg)
+<ArticleImage src="/img/ml/2/housing 数据集数值属性的摘要信息.jpg" alt="housing 数据集数值属性的摘要信息" title="" description="housing 数据集数值属性的摘要信息" />
 
 - `std`，标准差（用于测量数值的离散程度）；
 - `25%`/`50%`/`75%`，百分位数，表示在观测值组中给定百分比的观测值都低于该值；
@@ -317,7 +315,7 @@ housing.hist(bins=50, figsize=(20,15))
 plt.show()
 ```
 
-![请添加图片描述](https://img-blog.csdnimg.cn/57a3bffef89b41bcbfee74481ad256cf.png)
+<ArticleImage src="/img/ml/2/housing 属性直方图.png" alt="housing 属性直方图" title="" description="housing 属性直方图" />
 
 - `median_income`，收入中位数，明显不是美元（而是万美元）在衡量，而是按一定比例缩小了（上限 15，下限 0.5），其他属性值也有被不同程度的缩放；
 - `housing_median_age` 和 `median_house_value` 也被设置了上限，而 `median_house_value` 作为预测目标属性，需要特别注意；
@@ -409,7 +407,7 @@ housing["income_cat"] = pd.cut(housing["median_income"],
 housing["income_cat"].hist()
 ```
 
-![请添加图片描述](https://img-blog.csdnimg.cn/9f0b7ee10def46fe8d932e6ea9470823.png)
+<ArticleImage src="/img/ml/2/收入分层.png" alt="收入分层" title="" description="收入分层" />
 
 通过 Scikin-Learn 的 `StratifiedShuffleSplit` 按收入分层抽样；
 
@@ -450,7 +448,7 @@ compare_props["Strat. %error"] = 100 * compare_props["Stratified"] / compare_pro
 compare_props
 ```
 
-![请添加图片描述](https://img-blog.csdnimg.cn/a9b05f05fff04e928d6be20dbecd3e39.jpeg)
+<ArticleImage src="/img/ml/2/收入分层（完整、分层抽样、随机抽样）.jpg" alt="收入分层（完整、分层抽样、随机抽样）" title="" description="收入分层（完整、分层抽样、随机抽样）" />
 
 移除 income_cat 属性；
 
@@ -475,7 +473,7 @@ housing = strat_train_set.copy()
 housing.plot(kind="scatter", x="longitude", y="latitude", alpha=0.1)
 ```
 
-![请添加图片描述](https://img-blog.csdnimg.cn/47562e3cba164093b69419f07b5d0fe8.png)
+<ArticleImage src="/img/ml/2/经纬度数据密度分布.png" alt="经纬度数据密度分布" title="" description="经纬度数据密度分布" />
 
 可以从图中清晰分辨高密度区域；
 
@@ -489,7 +487,7 @@ housing.plot(kind="scatter", x="longitude", y="latitude", alpha=0.4,
 plt.legend()
 ```
 
-![请添加图片描述](https://img-blog.csdnimg.cn/b9d455ff0158402b8878f86a6717b28b.png)
+<ArticleImage src="/img/ml/2/经纬度人口密度和房价中位数分布.png" alt="经纬度人口密度和房价中位数分布" title="" description="经纬度人口密度和房价中位数分布" />
 
 人口数量用圆的半径（选项 s）表示，房价中位数用演示（选项 c）表示，其中颜色范围（选项 cmap）取自预定义颜色表 jet；
 
@@ -526,7 +524,7 @@ attributes = ["median_house_value", "median_income", "total_rooms", "housing_med
 scatter_matrix(housing[attributes], figsize=(12, 8))
 ```
 
-![请添加图片描述](https://img-blog.csdnimg.cn/e0a3597cbe6241168347ad4ea475ecdb.png)
+<ArticleImage src="/img/ml/2/属性相关性图像.png" alt="属性相关性图像" title="" description="属性相关性图像" />
 
 主对角线显示的是每个属性的直方图；其他位置显示属性之间的相关性；
 
@@ -536,7 +534,7 @@ scatter_matrix(housing[attributes], figsize=(12, 8))
 housing.plot(kind="scatter", x="median_income", y="median_house_value", alpha=0.1)
 ```
 
-![请添加图片描述](https://img-blog.csdnimg.cn/674afa10a19c4815b79a2b28e41c8ef8.png)
+<ArticleImage src="/img/ml/2/收入中位数与房价中位数相关性.png" alt="收入中位数与房价中位数相关性" title="" description="收入中位数与房价中位数相关性" />
 
 从图中可印证二者相关性较强，且 50W、35W、45W 处存在清晰的水平线，这些可能是客观存在的价格上限导致的，为了避免学习算法学到这些怪异的数据，可以尝试删除这些区域；
 
@@ -1211,7 +1209,7 @@ array([45805.04012754, 49686.17157851])
 
 **通过 REST API 开放服务**
 
-![请添加图片描述](https://img-blog.csdnimg.cn/a29ae039af1142e1984bd820dd664f36.png)
+<ArticleImage src="/img/ml/2/REST API 部署方式.drawio.png" alt="REST API 部署方式" title="" description="REST API 部署方式" />
 
 - 通过 joblib 将训练好的 Scikit-Learn 模型序列化保存，这个模型包含完整的预处理和预测流水线；
 - 在生产环境通过 Web Service 加载这个模型，并开放调用模型 predict 功能的接口；
